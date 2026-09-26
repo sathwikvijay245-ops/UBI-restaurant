@@ -1,6 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ==========================================
+       0. LIGHT / DARK THEME TOGGLE (CREAM THEME)
+       ========================================== */
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('ubi_theme');
+
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const isLight = document.body.classList.contains('light-theme');
+            localStorage.setItem('ubi_theme', isLight ? 'light' : 'dark');
+        });
+    }
+
+
+    /* ==========================================
        1. STICKY NAVBAR ON SCROLL
        ========================================== */
     const navbar = document.getElementById('navbar');
@@ -89,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.menu-tabs'),
         document.querySelector('.menu-container'),
         document.querySelector('.contact-card'),
-        document.querySelector('.map-placeholder')
+        document.querySelector('.map-card-wrapper')
     ].filter(el => el !== null); // Ensure they exist
 
     // Add initial CSS for reveal animations inline to avoid layouts jumping before JS loads

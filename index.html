@@ -27,11 +27,18 @@
                 <a href="#about" class="nav-link">Our Story</a>
                 <a href="#menu" class="nav-link">The Menu</a>
                 <a href="#contact" class="nav-link">Visit Us</a>
+                <a href="franchise.html" class="nav-link nav-highlight">Franchise</a>
             </nav>
-            <div class="nav-toggle" id="nav-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+                    <i class="fa-solid fa-sun icon-sun"></i>
+                    <i class="fa-solid fa-moon icon-moon"></i>
+                </button>
+                <div class="nav-toggle" id="nav-toggle" aria-label="Open Navigation Menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -306,20 +313,22 @@
                     </div>
                 </div>
 
-                <!-- Interactive Google Map Element -->
-                <div class="map-container">
-                    <iframe 
-                        title="United Biryanis of India Location Map" 
-                        class="map-iframe"
-                        src="https://maps.google.com/maps?q=Doolapally+Road,+Near+SBI+Bank,+Kompally,+Hyderabad,+Telangana+500100&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <div class="map-floating-card">
-                        <div class="map-floating-header">
+                <!-- Location Map & Action Card -->
+                <div class="map-card-wrapper">
+                    <div class="map-frame">
+                        <iframe 
+                            title="United Biryanis of India Location Map" 
+                            class="map-iframe"
+                            src="https://maps.google.com/maps?q=Doolapally+Road,+Near+SBI+Bank,+Kompally,+Hyderabad,+Telangana+500100&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="map-details-box">
+                        <div class="map-details-header">
                             <i class="fa-solid fa-location-dot gold-pin"></i>
-                            <div>
+                            <div class="map-details-text">
                                 <h3>United Biryanis of India</h3>
                                 <p>Door No. 5, Doolapally Rd, Near SBI Bank, Kompally, Hyderabad</p>
                             </div>
